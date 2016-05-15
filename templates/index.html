@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Census Predictor</title>
+        <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+     <form method='POST' action='/predict/'> {% csrf_token %}
+
+        <h1>Census Predictor</h1>
+
+        <fieldset>
+          <legend><span class="number">1</span>Input Variables</legend>
+          <label for="name">Age:</label>
+          <input type="text" id="Age" name="Age">
+
+          <label for="mail">Education:</label>
+          <input type="text" id="Education" name="Education">
+
+          <label for="password">Education_num:</label>
+          <input type="text" id="Education_num" name="Education_num">
+
+          <label for="password">Martial Status:</label>
+          <input type="text" id="Martial_Status" name="Martial_Status">
+
+          <label for="password">Relationship:</label>
+          <input type="text" id="Relationship" name="Relationship">
+
+          <label for="password">Race:</label>
+          <input type="text" id="Race" name="Race">
+
+          <label for="password">Sex:</label>
+          <input type="text" id="Sex" name="Sex">
+
+          <label for="password">Capital gain:</label>
+          <input type="text" id="Capital_gain" name="Capital_gain">
+
+          <label for="password">Capital loss:</label>
+          <input type="text" id="Capital_loss" name="Capital_loss">
+
+          <label for="password">Hours per week:</label>
+          <input type="text" id="Hours_per_week" name="Hours_per_week">
+
+
+        </fieldset>
+
+
+        <button type="submit">Predict</button>
+      </form>
+
+    </body>
+</html>
